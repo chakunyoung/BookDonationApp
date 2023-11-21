@@ -1,4 +1,3 @@
-package com.bookdone.book;
 package com.bookdona.chat;
 
 import org.springframework.boot.SpringApplication;
@@ -6,12 +5,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
-@SpringBootApplication(scanBasePackages = "com.bookdone")
-@EnableFeignClients(basePackages = "com.bookdone")
+@SpringBootApplication(scanBasePackages = "com.bookdona")
+@EnableFeignClients(basePackages = "com.bookdona")
 @EnableDiscoveryClient
-public class BookApplication {
+public class ChatApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BookApplication.class, args);
+		SpringApplication.run(ChatApplication.class, args);
 	}
 }

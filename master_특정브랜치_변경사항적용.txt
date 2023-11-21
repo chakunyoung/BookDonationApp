@@ -1,9 +1,0 @@
-git checkout origin/chat -- backend/chat
-git checkout origin/auth -- backend/Auth
-git checkout origin/book -- backend/book
-git checkout origin/discovery -- backend/discovery
-git checkout origin/donation -- backend/donation
-git checkout origin/gateway -- backend/gateway
-git checkout origin/member -- backend/member
-git checkout origin/notification -- backend/notification
-git checkout origin/front -- frontend/

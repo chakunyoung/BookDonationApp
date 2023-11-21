@@ -1,0 +1,48 @@
+server:
+  port: 0
+spring:
+  backend:
+    host: # host
+  application:
+    name: auth-service
+
+  security:
+    oauth2:
+      client:
+        registration:
+          kakao:
+            client-id: #native app key
+            scope: profile_nickname, account_email
+            redirect-uri: http://k9a308.p.ssafy.io:8000/api/auth/kakao
+            authorization-grant-type: authorization_code
+            client-name: kakao
+            client-authentication-method: POST
+
+        provider:
+          kakao:
+            authorization-uri: https://kauth.kakao.com/oauth/authorize
+            token-uri: https://kauth.kakao.com/oauth/token
+            user-info-uri: https://kapi.kakao.com/v2/user/me
+            user-name-attribute: id
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://k9a308.p.ssafy.io:8761/eureka
+
+
+
+
+jwt:
+  secret:  # Key
+  access-expiration: 180000000 # 30?
+  refresh-expiration: 1209600000 # 14?
+
+redis:
+  host: # host
+  port: # port
+  password: # pass
